@@ -39,10 +39,9 @@
 
 ---
 
-### 📊 Minhas Estatísticas GitHub
+### 📊 Analytcs & Hábitos de Código
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=EznRB&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" width="400" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EznRB&layout=compact&langs_count=7&theme=dracula" width="300" />
+  <img src="https://github.com/EznRB/EznRB/blob/metrics-renders/github-metrics.svg" alt="Metrics" width="100%">
 </div>
 
 ---
