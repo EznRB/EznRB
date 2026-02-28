@@ -1,0 +1,42 @@
+name: Metrics
+on:
+  # Roda a cada 24 horas automaticamente
+  schedule: [{cron: "0 0 * * *"}]
+  # Permite que você rode manualmente quando quiser
+  workflow_dispatch:
+  # Roda quando você mexe nesse próprio repositório
+  push: {branches: ["master", "main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Seu token é puxado automaticamente pelo GitHub, sem precisar configurar nada extra.
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Nome de usuário do GitHub
+          user: EznRB
+          
+          # Template & Estilo Visual
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: America/Sao_Paulo
+          
+          # Configurações do Plugin de Linguagens
+          plugin_languages: yes
+          plugin_languages_ignored: html, css # Esconde HTML e CSS puro se quiser dar foco no Java/TS (opcional)
+          plugin_languages_details: bytes-size, percentage
+          
+          # Configurações de Hábitos (Isso é bem legal: mostra que horas você coda)
+          plugin_habits: yes
+          plugin_habits_from: 200       # Vai olhar seus últimos 200 commits
+          plugin_habits_days: 14        # Vai analisar os seus últimos 14 dias
+          plugin_habits_facts: yes      # Mostra fatos legais sobre você
+          plugin_habits_charts: yes     # Mostra até os gráficos visuais
+          
+          # Ativação do modo tema clássico mas com paleta mais noturna/dark
+          config_display: large
