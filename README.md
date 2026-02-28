@@ -41,8 +41,9 @@
 
 ### 📊 Analytcs & Hábitos de Código
 <div align="center">
-  <img src="https://github.com/EznRB/EznRB/blob/metrics-renders/github-metrics.svg" alt="Metrics" width="100%">
+  <img src="github-metrics.svg" alt="Metrics" width="100%">
 </div>
+
 
 ---
 
